@@ -1,7 +1,7 @@
-import App from './App';
+import App from './app/App';
 import {BrowserRouter} from 'react-router-dom';
-import ThemeProvider from './theme/ThemeProvider';
 import {createRoot} from 'react-dom/client';
+import {ThemeProvider} from 'app/providers/ThemeProvider';
 
 
 
