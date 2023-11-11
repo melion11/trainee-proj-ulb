@@ -6,8 +6,8 @@ import {useTheme} from 'app/providers/ThemeProvider';
 import {classNames} from 'shared/lib/classNames/classNames';
 import {MainPageLazy} from 'pages/MainPage';
 import {AboutPageLazy} from 'pages/AboutPage';
-
-
+import AppRouter from './providers/router/ui/AppRouter';
+import {Navbar} from 'widgets/Navbar';
 
 
 const App = () => {
@@ -16,17 +16,9 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
+            <Navbar/>
+            <AppRouter/>
             <button onClick={toggleTheme}>Set Theme</button>
-
-            <Link to={'/'}>Main Page</Link>
-            <Link to={'/about'}>About Page</Link>
-
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path={'/'} element={<MainPageLazy/>}/>
-                    <Route path={'/about'} element={<AboutPageLazy/>}/>
-                </Routes>
-            </Suspense>
         </div>
     );
 };
