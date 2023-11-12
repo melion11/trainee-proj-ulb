@@ -12,7 +12,7 @@ root.render(
     <BrowserRouter>
         <ThemeProvider>
             <Suspense fallback={''}>
-            <App/>
+                <App/>
             </Suspense>
         </ThemeProvider>
     </BrowserRouter>

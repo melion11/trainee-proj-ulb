@@ -7,8 +7,8 @@ export const buildPlugins = ({paths}: BuildOptions): webpack.WebpackPluginInstan
 
     return [
         new HtmlWebpackPlugin({
-                template: paths.html
-            }
+            template: paths.html
+        }
         ),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
@@ -17,6 +17,7 @@ export const buildPlugins = ({paths}: BuildOptions): webpack.WebpackPluginInstan
         }),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(true)
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }

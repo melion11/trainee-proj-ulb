@@ -20,8 +20,8 @@ export const LangSwitcher = ({className}: LangSwitcherProps) => {
 
     return (
         <Button onClick={changeLanguage}
-                theme={ThemeButton.CLEAR}
-                className={classNames(cls.LangSwitcher, {}, [className])}>
+            theme={ThemeButton.CLEAR}
+            className={classNames(cls.LangSwitcher, {}, [className])}>
             <div className={cls.languageWrap}>
                 {i18n.language === 'ru' ? <img src={ruIcon} alt={'ru'}/> : <img src={enIcon} alt={'en'}/>}
                 {t('language')}
