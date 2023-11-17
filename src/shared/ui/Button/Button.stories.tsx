@@ -1,0 +1,32 @@
+import type { Meta, StoryObj } from '@storybook/react';
+
+import {Button, ThemeButton} from './Button';
+
+const meta = {
+    title: 'shared/Button',
+    component: Button,
+    tags: ['autodocs'],
+} satisfies Meta<typeof Button>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {
+    args: {
+        children: 'Primary Button'
+    },
+};
+
+export const Clear: Story = {
+    args: {
+        theme: ThemeButton.CLEAR,
+        children: 'Clear Button'
+    },
+};
+
+export const Outlined: Story = {
+    args: {
+        theme: ThemeButton.OUTLINE,
+        children: 'Outline Button'
+    },
+};
