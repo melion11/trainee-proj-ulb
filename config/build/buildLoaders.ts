@@ -28,5 +28,10 @@ export const buildLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
         exclude: /node_modules/,
     }
 
-    return [typescriptLoader, cssLoader, fileLoader, svgLoader]
+    return [
+        fileLoader,
+        svgLoader,
+        typescriptLoader,
+        cssLoader,
+    ];
 }
