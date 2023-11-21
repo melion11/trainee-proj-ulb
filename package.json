@@ -30,6 +30,7 @@
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-styling-webpack": "^0.0.5",
     "@storybook/blocks": "^7.5.3",
     "@storybook/react": "^7.5.3",
     "@storybook/react-webpack5": "^7.5.3",
@@ -43,9 +44,9 @@
     "@types/react-dom": "^18.2.7",
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.2",
+    "@types/webpack-bundle-analyzer": "^4.4.1",
     "@types/webpack-dev-server": "^4.7.2",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@types/webpack-bundle-analyzer": "^4.4.1",
     "babel-jest": "^29.7.0",
     "babel-plugin-i18next-extract": "^0.9.2",
     "css-loader": "^6.8.1",
@@ -75,12 +76,11 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
     "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "@storybook/addon-styling-webpack": "^0.0.5",
     "i18next": "^23.7.3",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.4.1",
@@ -92,14 +92,14 @@
   "loki": {
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.app",
+        "target": "chrome.doker",
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false
       },
       "chrome.iphone7": {
-        "target": "chrome.app",
+        "target": "chrome.doker",
         "preset": "iPhone 7"
       }
     }

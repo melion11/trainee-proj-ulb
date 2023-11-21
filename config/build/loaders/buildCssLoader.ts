@@ -16,8 +16,9 @@ export function buildCssLoader(isDev: boolean) {
                     },
                 },
             },
-            'sass-loader',
-
+            'sass-loader'
         ],
     };
 }
+
+// additionalData: `@import "../../../src/app/styles/varialbles/global.scss";`
