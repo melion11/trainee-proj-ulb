@@ -51,7 +51,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx}', '**/src/**/theme_dark.tsx', '**/src/**/theme_light.tsx'],
+            files: ['**/src/**/*.test.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 'off',
             },
