@@ -16,8 +16,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) =
          136.88zM45.49 45.75l8.85 33.28 24.2-24.36-33.05-8.92zM226.51
          45.75l-33.05 8.92 24.2 24.36 8.85-33.28zM136 264l-17.11-29.84h34.22L136
           264zM45.49 226.25l8.85-33.28 24.2 24.36-33.05 8.92zM226.51
-           226.25l-33.05-8.92 24.2-24.36 8.85 33.28z"
-              className="cls-1" fill={'#ecd57f'}/>
+           226.25l-33.05-8.92 24.2-24.36 8.85 33.28z" className="cls-1" fill={'#ecd57f'}/>
     </svg>
 )
 const ForwardRef = forwardRef(SvgComponent)
