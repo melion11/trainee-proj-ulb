@@ -2,5 +2,6 @@
   "language": "English",
   "notFoundPage": "Page not found",
   "error": "On this page was error!",
-  "reload": "Reload page"
+  "reload": "Reload page",
+  "toggle": "Toggle"
 }
