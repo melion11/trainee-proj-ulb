@@ -11,7 +11,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) =
         {...props}
     >
         <path d="M32.06 4h-.58l.58.42A23.11 23.11 0 1 1 4.95 41.84 28 28 0 0 0 31.17 60h.89a28 28 0 0 0 0-56Z"
-              fill={'#b13fff'}/>
+            fill={'#b13fff'}/>
         <path
             d="m20.45 29.54-1-.19a1.35 1.35 0 0 1-1-.79l-.39-.9a1.35
              1.35 0 0 0-2.42-.11l-.48.86a1.35 1.35 0 0 1-1.05.69l-1
@@ -32,7 +32,7 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) =
                    1.35 0 0 0 2-1.33l-.12-1a1.35 1.35 0 0 1 .44-1.18l.74-.65a1.35 1.35 0 0 0-.54-2.36Z"
             className="cls-2"/>
         <path d="M59.17 32A28 28 0 0 0 32.06 4v.39a23.1 23.1 0 0 1 0 37.55V60a28 28 0 0 0 27.11-28Z"
-              opacity={15}/>
+            opacity={15}/>
     </svg>
 )
 const ForwardRef = forwardRef(SvgComponent)
