@@ -1,11 +1,10 @@
 import type {Preview} from '@storybook/react';
-
 import i18n from './i18n';
 import '../../src/app/styles/index.scss';
 
 const preview: Preview = {
     globals: {
-        locale: 'en',
+        locale: i18n.language,
     },
     parameters: {
         actions: {argTypesRegex: '^on[A-Z].*'},

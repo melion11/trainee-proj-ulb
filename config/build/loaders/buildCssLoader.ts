@@ -3,6 +3,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 export function buildCssLoader(isDev: boolean) {
     return {
         test: /\.s[ac]ss$/i,
+        exclude: /node_modules/,
         use: [
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
@@ -20,5 +21,3 @@ export function buildCssLoader(isDev: boolean) {
         ],
     };
 }
-
-// additionalData: `@import "../../../src/app/styles/varialbles/global.scss";`

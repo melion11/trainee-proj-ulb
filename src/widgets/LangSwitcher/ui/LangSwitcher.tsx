@@ -2,30 +2,33 @@ import {classNames} from 'shared/lib/classNames/classNames';
 import cls from './LangSwitcher.module.scss'
 import {useTranslation} from 'react-i18next';
 import React from 'react';
-import {Button, ThemeButton} from 'shared/ui/Button/Button';
-import enIcon from '../../../shared/assets/uk.png'
-import ruIcon from '../../../shared/assets/russia.png'
+import {Button, ButtonTheme} from 'shared/ui/Button/Button';
 
 interface LangSwitcherProps {
     className?: string
+    short?: boolean
 }
 
-export const LangSwitcher = ({className}: LangSwitcherProps) => {
+export const LangSwitcher = ({className, short}: LangSwitcherProps) => {
 
     const {t, i18n} = useTranslation('translation');
 
-    const changeLanguage = () => {
-        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+    const changeLanguage = async () => {
+        await i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
+
+
+    const classes = {
+        langSwitcher: classNames(cls.LangSwitcher, {}, [className, short && cls.collapsed]),
+        languageWrap: classNames(cls.languageWrap, {}, [])
+    }
 
     return (
         <Button onClick={changeLanguage}
-            theme={ThemeButton.CLEAR}
-            className={classNames(cls.LangSwitcher, {}, [className])}>
-            <div className={cls.languageWrap}>
-                {i18n.language === 'ru' ?
-                    <img src={ruIcon} alt={'ru'}/> : <img src={enIcon} alt={'en'}/>}
-                {t('language')}
+                theme={ButtonTheme.CLEAR}
+                className={classes.langSwitcher}>
+            <div className={classes.languageWrap}>
+                <span>{short ? t('shortLanguage') : t('language')}</span>
             </div>
         </Button>
     );

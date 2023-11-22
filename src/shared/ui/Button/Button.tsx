@@ -3,21 +3,45 @@ import cls from './Button.module.scss'
 import {FC, HTMLAttributes} from 'react';
 
 
-export const enum ThemeButton  {
+export const enum ButtonTheme {
     CLEAR = 'clear',
-    OUTLINE = 'outline'
+    OUTLINE = 'outline',
 }
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement>{
+
+export const enum ButtonSize {
+    SMALL = 'small',
+    MEDIUM = 'medium',
+    LARGE = 'large'
+}
+
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
     className?: string
-    theme?: ThemeButton
+    theme?: ButtonTheme
+    size?: ButtonSize
+    fullWidth?: boolean
+    inverted?: boolean
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-    const {className, children, theme, ...restProps} = props
+    const {
+        className,
+        children,
+        theme,
+        inverted, fullWidth
+        , size,
+        ...restProps} = props
+
+    const classes = {
+        button: classNames(cls.Button, {},
+            [
+                className, cls[theme], cls[size],
+                fullWidth && cls.fullWidth, inverted && cls.inverted
+            ])
+    }
 
 
     return (
-        <button className={classNames(cls.Button, {}, [className, cls[theme]])} {...restProps}>
+        <button className={classes.button} {...restProps}>
             {children}
         </button>
     );

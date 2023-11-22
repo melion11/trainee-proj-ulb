@@ -16,3 +16,23 @@
     color: var(--primary-color);
     background: none;
 }
+
+.small {
+    font: var(--font-m);
+}
+
+.medium {
+    font: var(--font-l);
+}
+
+.large {
+    font: var(--font-xl);
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.inverted {
+    background-color: var(--inverted-bg-color);
+}
