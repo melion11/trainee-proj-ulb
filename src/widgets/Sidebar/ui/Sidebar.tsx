@@ -36,14 +36,14 @@ export const Sidebar = ({className}: SidebarProps) => {
 
             <div className={classes.links}>
                 <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main}
-                         className={cls.link}>
+                    className={cls.link}>
                     <div className={cls.linkIcon}>
                         <Home/>
                     </div>
                     {!collapsed && <span>{t('main')}</span>}
                 </AppLink>
                 <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about}
-                         className={cls.link}
+                    className={cls.link}
                 >
                     <div className={cls.linkIcon}>
                         <Info />
@@ -57,9 +57,9 @@ export const Sidebar = ({className}: SidebarProps) => {
                 <LangSwitcher short={true}/>
             </div>
             <Button className={classes.toggleBtn}
-                    theme={ButtonTheme.CLEAR} inverted={true}
-                    fullWidth={true} data-testid="sidebar-toggle"
-                    onClick={getToggle}>{collapsed ? <UnionLeft/> : <UnionRight/>}</Button>
+                theme={ButtonTheme.CLEAR} inverted={true}
+                fullWidth={true} data-testid="sidebar-toggle"
+                onClick={getToggle}>{collapsed ? <UnionLeft/> : <UnionRight/>}</Button>
 
 
         </div>
