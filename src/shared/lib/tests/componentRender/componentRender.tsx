@@ -14,11 +14,11 @@ export function componentRenderOptions(component: ReactNode, options: ComponentR
         route = '/',
     } = options;
 
-    return render (
+    return render(
         <MemoryRouter initialEntries={[route]}>
-                <I18nextProvider i18n={i18nForTests}>
-                        <div>{component}</div>
-                </I18nextProvider>
+            <I18nextProvider i18n={i18nForTests}>
+                <div>{component}</div>
+            </I18nextProvider>
         </MemoryRouter>
     );
 }
