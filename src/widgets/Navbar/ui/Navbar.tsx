@@ -24,7 +24,7 @@ export const Navbar = ({className}: NavbarProps) => {
                 {t('signIn')}
             </Button>
             <Modal isOpen={isAuthModal} onClose={toggleModal}>
-
+                AAA
             </Modal>
         </div>
     );
