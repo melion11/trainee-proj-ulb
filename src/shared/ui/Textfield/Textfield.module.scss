@@ -17,3 +17,9 @@
         outline: 2px solid var(--primary-color);
     }
 }
+
+.textfieldWrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

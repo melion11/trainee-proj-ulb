@@ -2,8 +2,32 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    min-width: 540px;
+    max-width: 540px;
     width: 100%;
     margin: 0 auto;
-    padding: 5px 10px;
+    padding: 5px 15px;
+}
+
+.loginTitle {
+    text-align: center;
+    font: var(--font-xl);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.fieldsWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.signInBtn {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
 }

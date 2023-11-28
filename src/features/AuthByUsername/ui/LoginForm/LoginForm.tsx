@@ -13,9 +13,12 @@ export const LoginForm = ({className}: LoginFormProps) => {
 
     return (
         <form className={classNames(cls.LoginForm, {}, [className])}>
-            <Textfield placeholder={'Your username'}/>
-            <Textfield placeholder={'Your password'} type={'password'}/>
-            <Button theme={ButtonTheme.OUTLINE}>{t('signIn')}</Button>
+            <h2 className={cls.loginTitle}>{t('signIn')}</h2>
+            <div className={cls.fieldsWrap}>
+                <Textfield id={'userName'} autoFocus label={'Username: '} placeholder={'Your username'}/>
+                <Textfield id={'password'} label={'Password: '} placeholder={'Your password'} type={'password'}/>
+            </div>
+            <Button className={cls.signInBtn} theme={ButtonTheme.OUTLINE}>{t('signIn')}</Button>
         </form>
     );
 };
