@@ -16,7 +16,7 @@ export const Textfield = memo((props: TextfieldProps) => {
     const {className, id, label, value, onChange, type = 'text', disabled, autoFocus, ...restProps} = props
 
     const [isFocused, setIsFocused] = useState(false)
-    const ref = useRef()
+    // const ref = useRef()
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.currentTarget.value)
