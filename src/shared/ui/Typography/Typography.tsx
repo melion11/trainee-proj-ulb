@@ -1,5 +1,6 @@
 import {ComponentPropsWithoutRef, ElementType, ReactNode} from 'react';
-
+import {classNames} from 'shared/lib/classNames/classNames';
+import cls from './Typography.module.scss'
 
 export enum TypographyVariant {
     LARGE = 'large',
@@ -7,13 +8,14 @@ export enum TypographyVariant {
     H2 = 'h2',
     H3 = 'h3',
     Body1 = 'body1',
-    Subtitle1 = 'subtitle1',
-    Body2 = 'body2',
-    Subtitle2 = 'subtitle2',
-    Caption = 'caption',
-    Overline = 'overline',
-    Link1 = 'link1',
-    Link2 = 'link2'
+    SUBTITLE1 = 'subtitle1',
+    BODY2 = 'body2',
+    SUBTITLE2 = 'subtitle2',
+    CAPTION = 'caption',
+    OVERLINE = 'overline',
+    LINK1 = 'link1',
+    LINK2 = 'link2',
+    ERROR = 'error'
 }
 
 
@@ -21,7 +23,7 @@ type TypographyProps<T extends ElementType> = {
     as?: T
     variant?: TypographyVariant
     children?: ReactNode
-    className: string
+    className?: string
 } & ComponentPropsWithoutRef<T>
 
 export const Typography = <T extends ElementType>({
@@ -35,7 +37,7 @@ export const Typography = <T extends ElementType>({
     const Component = as || 'p'
 
     return (
-        <Component className={className} {...restProps}>
+        <Component className={classNames(cls[variant], {}, [className])} {...restProps}>
             {children}
         </Component>
     );

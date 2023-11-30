@@ -20,6 +20,7 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
     size?: ButtonSize
     fullWidth?: boolean
     inverted?: boolean
+    disabled?: boolean
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -27,21 +28,24 @@ export const Button: FC<ButtonProps> = (props) => {
         className,
         children,
         theme,
-        inverted, fullWidth
+        inverted, fullWidth,
+        disabled
         , size,
-        ...restProps} = props
+        ...restProps
+    } = props
 
     const classes = {
         button: classNames(cls.Button, {},
             [
                 className, cls[theme], cls[size],
-                fullWidth && cls.fullWidth, inverted && cls.inverted
+                fullWidth && cls.fullWidth, inverted && cls.inverted,
+                disabled && cls.disabled
             ])
     }
 
 
     return (
-        <button className={classes.button} {...restProps}>
+        <button className={classes.button} disabled={disabled} {...restProps}>
             {children}
         </button>
     );

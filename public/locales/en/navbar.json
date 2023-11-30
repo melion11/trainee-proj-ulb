@@ -1,5 +1,6 @@
 {
   "main": "Main page",
   "about": "About us",
-  "signIn": "Sign In"
+  "signIn": "Sign In",
+  "logOut": "Log Out"
 }

@@ -1,3 +1,5 @@
 {
-  "signIn": "Войти"
+  "signIn": "Sign In",
+  "username": "Username",
+  "password": "Password"
 }
